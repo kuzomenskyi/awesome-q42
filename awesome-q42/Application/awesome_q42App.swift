@@ -18,7 +18,6 @@ struct awesome_q42App: App {
         WindowGroup {
             ZStack {
                 AnimatedBackgroundView(viewModel: animationViewModel)
-                ContentView()
             }
             .onAppear {
                 animationViewModel.isCandleLightAnimating = true

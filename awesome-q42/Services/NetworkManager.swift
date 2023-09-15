@@ -30,7 +30,7 @@ final class NetworkManager: NSObject {
     // MARK: Private Action
     
     // MARK: Function
-    func searchNumber(_ number: String) async throws -> Int {
+    func searchLeaks(byPhoneNumber number: String) async throws -> Int {
         let number = number.numbersOnly()
         let request: URLRequest = .init(url: URL(string: "\(checkerURLString)/\(number)")!)
         

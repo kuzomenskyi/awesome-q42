@@ -25,17 +25,17 @@ final class NetworkManagerTests: XCTestCase {
     // MARK: Private Action
     
     // MARK: Function
-    func testSearchNumber() {
+    func testSearchingLeaksByPhoneNumber() {
         let expectation = expectation(description: "testSearchNumber")
         Task {
             do {
-                let _ = try await networkManager.searchNumber("asdasd")
+                let _ = try await networkManager.searchLeaks(byPhoneNumber: "asdasd")
                 XCTFail("Not failed with wrong number")
                 expectation.fulfill()
             } catch {
                 do {
                     // This number is not leaked
-                    let _ = try await networkManager.searchNumber("380669582930222")
+                    let _ = try await networkManager.searchLeaks(byPhoneNumber: "380669582930222")
                     expectation.fulfill()
                 } catch {
                     guard CustomError.numberNotFound.isEqualTo(error) else {
