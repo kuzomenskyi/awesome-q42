@@ -10,12 +10,22 @@
 		180F68812AB4D56E00CDF2A3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F68802AB4D56E00CDF2A3 /* NetworkManager.swift */; };
 		180F68842AB4D5BC00CDF2A3 /* SpamDBInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F68832AB4D5BC00CDF2A3 /* SpamDBInfo.swift */; };
 		180F68862AB4D5DB00CDF2A3 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F68852AB4D5DB00CDF2A3 /* CustomError.swift */; };
-		180F68892AB4D65B00CDF2A3 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F68882AB4D65B00CDF2A3 /* Strings.swift */; };
 		180F688C2AB4D69A00CDF2A3 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F688B2AB4D69A00CDF2A3 /* String+Ext.swift */; };
 		180F688E2AB4D6C600CDF2A3 /* EmailDataLeak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F688D2AB4D6C600CDF2A3 /* EmailDataLeak.swift */; };
 		180F68902AB4D6E800CDF2A3 /* WebsiteCheckResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F688F2AB4D6E800CDF2A3 /* WebsiteCheckResponse.swift */; };
 		180F68932AB4D77900CDF2A3 /* HIBPErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F68922AB4D77900CDF2A3 /* HIBPErrorResponse.swift */; };
 		180F68A22AB4D87400CDF2A3 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F68A12AB4D87400CDF2A3 /* NetworkManagerTests.swift */; };
+		180F68AC2AB4E29D00CDF2A3 /* ScreenEventsObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F68A42AB4E29D00CDF2A3 /* ScreenEventsObserver.swift */; };
+		180F68AD2AB4E29D00CDF2A3 /* IScreenEventsObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F68A52AB4E29D00CDF2A3 /* IScreenEventsObserver.swift */; };
+		180F68AE2AB4E29D00CDF2A3 /* ICandleLightAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F68A72AB4E29D00CDF2A3 /* ICandleLightAnimator.swift */; };
+		180F68AF2AB4E29D00CDF2A3 /* CandleLightAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F68A82AB4E29D00CDF2A3 /* CandleLightAnimator.swift */; };
+		180F68B02AB4E29D00CDF2A3 /* IEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F68AA2AB4E29D00CDF2A3 /* IEmitter.swift */; };
+		180F68B12AB4E29D00CDF2A3 /* Emitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F68AB2AB4E29D00CDF2A3 /* Emitter.swift */; };
+		180F68B92AB4E32800CDF2A3 /* AnimatedBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F68B52AB4E32800CDF2A3 /* AnimatedBackgroundView.swift */; };
+		180F68BA2AB4E32800CDF2A3 /* AnimatedBackgroundVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F68B62AB4E32800CDF2A3 /* AnimatedBackgroundVM.swift */; };
+		180F68BB2AB4E32800CDF2A3 /* AnimationUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F68B72AB4E32800CDF2A3 /* AnimationUIView.swift */; };
+		180F68BC2AB4E32800CDF2A3 /* AnimationUIViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F68B82AB4E32800CDF2A3 /* AnimationUIViewRepresentable.swift */; };
+		180F68BE2AB4E34B00CDF2A3 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F68BD2AB4E34B00CDF2A3 /* Images.swift */; };
 		18B952E62AB4D43900911771 /* awesome_q42App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B952E52AB4D43900911771 /* awesome_q42App.swift */; };
 		18B952E82AB4D43900911771 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B952E72AB4D43900911771 /* ContentView.swift */; };
 		18B952EA2AB4D43A00911771 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18B952E92AB4D43A00911771 /* Assets.xcassets */; };
@@ -36,7 +46,6 @@
 		180F68802AB4D56E00CDF2A3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		180F68832AB4D5BC00CDF2A3 /* SpamDBInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpamDBInfo.swift; sourceTree = "<group>"; };
 		180F68852AB4D5DB00CDF2A3 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
-		180F68882AB4D65B00CDF2A3 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		180F688B2AB4D69A00CDF2A3 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		180F688D2AB4D6C600CDF2A3 /* EmailDataLeak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailDataLeak.swift; sourceTree = "<group>"; };
 		180F688F2AB4D6E800CDF2A3 /* WebsiteCheckResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsiteCheckResponse.swift; sourceTree = "<group>"; };
@@ -44,6 +53,17 @@
 		180F68922AB4D77900CDF2A3 /* HIBPErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIBPErrorResponse.swift; sourceTree = "<group>"; };
 		180F68982AB4D7F700CDF2A3 /* awesome-q42Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "awesome-q42Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		180F68A12AB4D87400CDF2A3 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
+		180F68A42AB4E29D00CDF2A3 /* ScreenEventsObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenEventsObserver.swift; sourceTree = "<group>"; };
+		180F68A52AB4E29D00CDF2A3 /* IScreenEventsObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IScreenEventsObserver.swift; sourceTree = "<group>"; };
+		180F68A72AB4E29D00CDF2A3 /* ICandleLightAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICandleLightAnimator.swift; sourceTree = "<group>"; };
+		180F68A82AB4E29D00CDF2A3 /* CandleLightAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CandleLightAnimator.swift; sourceTree = "<group>"; };
+		180F68AA2AB4E29D00CDF2A3 /* IEmitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IEmitter.swift; sourceTree = "<group>"; };
+		180F68AB2AB4E29D00CDF2A3 /* Emitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emitter.swift; sourceTree = "<group>"; };
+		180F68B52AB4E32800CDF2A3 /* AnimatedBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedBackgroundView.swift; sourceTree = "<group>"; };
+		180F68B62AB4E32800CDF2A3 /* AnimatedBackgroundVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedBackgroundVM.swift; sourceTree = "<group>"; };
+		180F68B72AB4E32800CDF2A3 /* AnimationUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationUIView.swift; sourceTree = "<group>"; };
+		180F68B82AB4E32800CDF2A3 /* AnimationUIViewRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationUIViewRepresentable.swift; sourceTree = "<group>"; };
+		180F68BD2AB4E34B00CDF2A3 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		18B952E22AB4D43900911771 /* awesome-q42.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "awesome-q42.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18B952E52AB4D43900911771 /* awesome_q42App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = awesome_q42App.swift; sourceTree = "<group>"; };
 		18B952E72AB4D43900911771 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,6 +92,9 @@
 		180F687F2AB4D56800CDF2A3 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				180F68A62AB4E29D00CDF2A3 /* CandleLightAnimator */,
+				180F68A92AB4E29D00CDF2A3 /* Emitter */,
+				180F68A32AB4E29D00CDF2A3 /* ScreenEventsObserver */,
 				180F68802AB4D56E00CDF2A3 /* NetworkManager.swift */,
 			);
 			path = Services;
@@ -92,7 +115,7 @@
 		180F68872AB4D65600CDF2A3 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				180F68882AB4D65B00CDF2A3 /* Strings.swift */,
+				180F68BD2AB4E34B00CDF2A3 /* Images.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -111,6 +134,60 @@
 				180F68A12AB4D87400CDF2A3 /* NetworkManagerTests.swift */,
 			);
 			path = "awesome-q42Tests";
+			sourceTree = "<group>";
+		};
+		180F68A32AB4E29D00CDF2A3 /* ScreenEventsObserver */ = {
+			isa = PBXGroup;
+			children = (
+				180F68A42AB4E29D00CDF2A3 /* ScreenEventsObserver.swift */,
+				180F68A52AB4E29D00CDF2A3 /* IScreenEventsObserver.swift */,
+			);
+			path = ScreenEventsObserver;
+			sourceTree = "<group>";
+		};
+		180F68A62AB4E29D00CDF2A3 /* CandleLightAnimator */ = {
+			isa = PBXGroup;
+			children = (
+				180F68A72AB4E29D00CDF2A3 /* ICandleLightAnimator.swift */,
+				180F68A82AB4E29D00CDF2A3 /* CandleLightAnimator.swift */,
+			);
+			path = CandleLightAnimator;
+			sourceTree = "<group>";
+		};
+		180F68A92AB4E29D00CDF2A3 /* Emitter */ = {
+			isa = PBXGroup;
+			children = (
+				180F68AA2AB4E29D00CDF2A3 /* IEmitter.swift */,
+				180F68AB2AB4E29D00CDF2A3 /* Emitter.swift */,
+			);
+			path = Emitter;
+			sourceTree = "<group>";
+		};
+		180F68B22AB4E31800CDF2A3 /* View Layer */ = {
+			isa = PBXGroup;
+			children = (
+				180F68B32AB4E32800CDF2A3 /* Animation */,
+			);
+			path = "View Layer";
+			sourceTree = "<group>";
+		};
+		180F68B32AB4E32800CDF2A3 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				180F68B42AB4E32800CDF2A3 /* AnimatedBackgroundView */,
+				180F68B72AB4E32800CDF2A3 /* AnimationUIView.swift */,
+				180F68B82AB4E32800CDF2A3 /* AnimationUIViewRepresentable.swift */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		180F68B42AB4E32800CDF2A3 /* AnimatedBackgroundView */ = {
+			isa = PBXGroup;
+			children = (
+				180F68B52AB4E32800CDF2A3 /* AnimatedBackgroundView.swift */,
+				180F68B62AB4E32800CDF2A3 /* AnimatedBackgroundVM.swift */,
+			);
+			path = AnimatedBackgroundView;
 			sourceTree = "<group>";
 		};
 		18B952D92AB4D43900911771 = {
@@ -138,6 +215,7 @@
 				180F688A2AB4D69400CDF2A3 /* Extensions */,
 				180F68872AB4D65600CDF2A3 /* Utilities */,
 				180F68822AB4D5B700CDF2A3 /* Model */,
+				180F68B22AB4E31800CDF2A3 /* View Layer */,
 				180F687F2AB4D56800CDF2A3 /* Services */,
 				18B952E52AB4D43900911771 /* awesome_q42App.swift */,
 				18B952E72AB4D43900911771 /* ContentView.swift */,
@@ -263,15 +341,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				180F68AD2AB4E29D00CDF2A3 /* IScreenEventsObserver.swift in Sources */,
 				180F68932AB4D77900CDF2A3 /* HIBPErrorResponse.swift in Sources */,
+				180F68B12AB4E29D00CDF2A3 /* Emitter.swift in Sources */,
+				180F68AE2AB4E29D00CDF2A3 /* ICandleLightAnimator.swift in Sources */,
 				180F68862AB4D5DB00CDF2A3 /* CustomError.swift in Sources */,
+				180F68BB2AB4E32800CDF2A3 /* AnimationUIView.swift in Sources */,
 				180F688C2AB4D69A00CDF2A3 /* String+Ext.swift in Sources */,
+				180F68BE2AB4E34B00CDF2A3 /* Images.swift in Sources */,
+				180F68B02AB4E29D00CDF2A3 /* IEmitter.swift in Sources */,
+				180F68AC2AB4E29D00CDF2A3 /* ScreenEventsObserver.swift in Sources */,
 				180F68902AB4D6E800CDF2A3 /* WebsiteCheckResponse.swift in Sources */,
+				180F68BA2AB4E32800CDF2A3 /* AnimatedBackgroundVM.swift in Sources */,
 				180F68812AB4D56E00CDF2A3 /* NetworkManager.swift in Sources */,
+				180F68B92AB4E32800CDF2A3 /* AnimatedBackgroundView.swift in Sources */,
 				18B952E82AB4D43900911771 /* ContentView.swift in Sources */,
 				180F68842AB4D5BC00CDF2A3 /* SpamDBInfo.swift in Sources */,
 				180F688E2AB4D6C600CDF2A3 /* EmailDataLeak.swift in Sources */,
-				180F68892AB4D65B00CDF2A3 /* Strings.swift in Sources */,
+				180F68AF2AB4E29D00CDF2A3 /* CandleLightAnimator.swift in Sources */,
+				180F68BC2AB4E32800CDF2A3 /* AnimationUIViewRepresentable.swift in Sources */,
 				18B952E62AB4D43900911771 /* awesome_q42App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

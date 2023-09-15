@@ -9,9 +9,33 @@ import SwiftUI
 
 @main
 struct awesome_q42App: App {
+    // MARK: Constant
+    
+    // MARK: Private Constant
+    
+    // MARK: Variable
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ZStack {
+                AnimatedBackgroundView(viewModel: animationViewModel)
+                ContentView()
+            }
+            .onAppear {
+                animationViewModel.isCandleLightAnimating = true
+            }
         }
     }
+    
+    // MARK: Private Variable
+    @StateObject private var animationViewModel: AnimatedBackgroundVM = .init(model: .init(isCandleLightAnimating: false, isFlowingParticles: true))
+    
+    // MARK: Init
+    
+    // MARK: Action
+    
+    // MARK: Private Action
+    
+    // MARK: Function
+    
+    // MARK: Private Function
 }
