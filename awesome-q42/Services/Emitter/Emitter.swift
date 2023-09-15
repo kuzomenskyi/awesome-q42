@@ -57,7 +57,7 @@ class Emitter: IEmitter {
             cell.velocityRange = 40
             cell.emissionLongitude = .pi / 4
             cell.emissionRange = .pi / 6
-            cell.scale = 0.8
+            cell.scale = 0.2
             cell.scaleRange = 0.5
             cell.alphaRange = 0.3
             output.append(cell)

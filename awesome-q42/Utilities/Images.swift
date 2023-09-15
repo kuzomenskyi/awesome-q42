@@ -8,5 +8,5 @@
 import UIKit
 
 struct Images {
-    static let particle_1_5x5 = UIImage(named: "Particle_1")!
+    static let heart = UIImage(named: "heart")!
 }

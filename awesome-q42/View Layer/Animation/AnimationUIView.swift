@@ -14,7 +14,7 @@ class AnimationUIView: UIView {
     // MARK: Private Constant
     
     // MARK: Variable
-    lazy var emitter: IEmitter = Emitter(images: [Images.particle_1_5x5])
+    lazy var emitter: IEmitter = Emitter(images: [Images.heart])
     
     // MARK: Private Variable
     
@@ -29,7 +29,7 @@ class AnimationUIView: UIView {
         super.layoutSubviews()
         
         let emitterLayer = emitter.layer
-        emitterLayer.position = CGPoint(x: 0, y: frame.height)
+        emitterLayer.position = CGPoint(x: 0, y: frame.height * 1.2)
         emitterLayer.emitterSize = CGSize(width: frame.width, height: 2)
     }
     
