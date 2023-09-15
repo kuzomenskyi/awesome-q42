@@ -17,7 +17,6 @@ struct EmailDataLeak: Codable {
     let isVerified, isFabricated, isSensitive, isRetired: Bool
     let isSpamList, isMalware: Bool
 
-    // TODO: Remove if not needed
     enum CodingKeys: String, CodingKey {
         case name = "Name"
         case title = "Title"

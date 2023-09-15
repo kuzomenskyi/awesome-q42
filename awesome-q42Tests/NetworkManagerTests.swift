@@ -7,8 +7,6 @@
 
 import XCTest
 @testable import awesome_q42
-// TODO: Remove if not needed
-//import JavaScriptCore
 
 final class NetworkManagerTests: XCTestCase {
     // MARK: Constant
@@ -28,13 +26,11 @@ final class NetworkManagerTests: XCTestCase {
     
     // MARK: Function
     func testGetSpamDBInfo() {
-        let manager: NetworkManager = .init()
-        
         let expectation = XCTestExpectation(description: "testGetSpamDBInfo")
         
         Task {
             do {
-                let _ = try await manager.getSpamDBInfo()
+                let _ = try await networkManager.getSpamDBInfo()
                 expectation.fulfill()
             } catch {
                 XCTFail("Failed testGetSpamDBInfo with error: \(error)")
@@ -45,17 +41,15 @@ final class NetworkManagerTests: XCTestCase {
     }
     
     func testSearchNumber() {
-        let manager = NetworkManager()
-        
         let expectation = expectation(description: "testSearchNumber")
         Task {
             do {
-                let _ = try await manager.searchNumber("asdasd")
+                let _ = try await networkManager.searchNumber("asdasd")
                 XCTFail("Not failed with wrong number")
                 expectation.fulfill()
             } catch {
                 do {
-                    let _ = try await manager.searchNumber("380669582930")
+                    let _ = try await networkManager.searchNumber("380669582930")
                     expectation.fulfill()
                 } catch {
                     XCTFail("Failed with error: \(error)")
@@ -68,17 +62,32 @@ final class NetworkManagerTests: XCTestCase {
     }
     
     func testSearchingDataLeaksByEmail() {
-        // TODO: Configure
+        let expectation = expectation(description: "testSearchingDataLeaksByEmail")
+        
+        Task {
+            do {
+                // Leaked email
+                let leaks = try await networkManager.searchLeaks(byEmail: "qwerty123@gmail.com")
+                print("leaks:", leaks)
+                
+                XCTAssertTrue(leaks.count > 0)
+                expectation.fulfill()
+            } catch {
+                XCTFail("Failed with error: \(error)")
+                expectation.fulfill()
+            }
+        }
+        
+        wait(for: [expectation], timeout: 5)
     }
     
     func testSearchingDataLeaksByPassword() {
-        let manager = networkManager
-        
         let expectation = expectation(description: "testSearchingDataLEaksByPassword")
         
         Task {
             do {
-                let leaks = try await manager.searchLeaks(byPassword: "qwerty")
+                // Leaked password
+                let leaks = try await networkManager.searchLeaks(byPassword: "qwerty")
                 print("leaks:", leaks)
                 
                 XCTAssertTrue(leaks > 0)
@@ -93,15 +102,50 @@ final class NetworkManagerTests: XCTestCase {
     }
     
     func testCheckingWebsite() {
-        // TODO: Configure
+        let expectation = expectation(description: "testCheckingWebsite")
+        
+        Task {
+            do {
+                // Leaked website
+                let result = try await networkManager.checkWebsite("https://www.jefit.com")
+                print("result:", result as Any)
+                
+                XCTAssertTrue((result?.pwnCount ?? 0) > 0)
+                expectation.fulfill()
+            } catch {
+                XCTFail("Failed with error: \(error)")
+                expectation.fulfill()
+            }
+        }
+        
+        wait(for: [expectation], timeout: 5)
     }
     
     func testGettingIconForWebsite() {
-        // TODO: Configure
+        let expectation = expectation(description: "testGettingIconForWebsite")
+        
+        Task {
+            do {
+                // Leaked website
+                let result = try await networkManager.getIcon(forWebsite: "https://www.google.com")
+                print("result:", result as Any)
+                
+                XCTAssertTrue(result != nil)
+                expectation.fulfill()
+            } catch {
+                XCTFail("Failed with error: \(error)")
+                expectation.fulfill()
+            }
+        }
+        
+        wait(for: [expectation], timeout: 5)
     }
     
     func testGettingDomainName() {
-        // TODO: Configure
+        let result = networkManager.getDomainName(from: "https://www.google.com")
+        print("result:", result as Any)
+        
+        XCTAssertTrue(result == "google")
     }
     
     // MARK: Private Function
