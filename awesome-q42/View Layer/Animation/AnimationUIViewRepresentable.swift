@@ -14,7 +14,6 @@ struct AnimatioUIViewRepresetable: UIViewRepresentable {
     // MARK: Private Constant
     
     // MARK: Variable
-    @Binding var isCadleLightAnimating: Bool
     @Binding var isFlowingParticles: Bool
     
     // MARK: Private Variable

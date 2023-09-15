@@ -14,12 +14,11 @@ struct AnimatedBackgroundView: View {
     
     // MARK: Variable
     var body: some View {
-        AnimatioUIViewRepresetable(isCadleLightAnimating: $viewModel.model.isCandleLightAnimating, isFlowingParticles: $viewModel.model.isFlowingParticles)
+        AnimatioUIViewRepresetable(isFlowingParticles: $viewModel.model.isFlowingParticles)
             .onChange(of: scenePhase, perform: { newPhase in
                 let shouldAnimate = newPhase == .active
                 
                 if viewModel.model.isPausedAnimations {
-                    viewModel.model.isCandleLightAnimating = shouldAnimate
                     viewModel.model.isFlowingParticles = shouldAnimate
                 }
                 viewModel.model.isPausedAnimations = !shouldAnimate

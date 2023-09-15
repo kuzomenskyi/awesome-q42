@@ -18,12 +18,23 @@ struct awesome_q42App: App {
         WindowGroup {
             ZStack {
                 AnimatedBackgroundView(viewModel: animationViewModel)
+                switch viewModel.route {
+                case .splash:
+                    SplashView(viewModel: splashVM)
+                case .home:
+                    Text("Home screen")
+                }
+            }
+            .onAppear {
+                viewModel.configure(splashVM: splashVM, animatedBackgroundVM: animationViewModel)
             }
         }
     }
     
     // MARK: Private Variable
-    @StateObject private var animationViewModel: AnimatedBackgroundVM = .init(model: .init(isCandleLightAnimating: false, isFlowingParticles: true))
+    @StateObject private var viewModel: AppVM = .mock
+    @StateObject private var animationViewModel: AnimatedBackgroundVM = .init(model: .init(isFlowingParticles: false))
+    @StateObject private var splashVM: SplashVM = .mock
     
     // MARK: Init
     

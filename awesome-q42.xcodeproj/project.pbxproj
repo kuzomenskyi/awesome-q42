@@ -27,6 +27,10 @@
 		18B952E62AB4D43900911771 /* awesome_q42App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B952E52AB4D43900911771 /* awesome_q42App.swift */; };
 		18B952EA2AB4D43A00911771 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18B952E92AB4D43A00911771 /* Assets.xcassets */; };
 		18B952ED2AB4D43A00911771 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18B952EC2AB4D43A00911771 /* Preview Assets.xcassets */; };
+		18FD85742AB502030081FD5A /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FD85732AB502030081FD5A /* SplashView.swift */; };
+		18FD85762AB502170081FD5A /* SplashVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FD85752AB502170081FD5A /* SplashVM.swift */; };
+		18FD85782AB508380081FD5A /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FD85772AB508380081FD5A /* Color+Ext.swift */; };
+		18FD857C2AB50F230081FD5A /* AppVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FD857B2AB50F230081FD5A /* AppVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +67,10 @@
 		18B952E52AB4D43900911771 /* awesome_q42App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = awesome_q42App.swift; sourceTree = "<group>"; };
 		18B952E92AB4D43A00911771 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18B952EC2AB4D43A00911771 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		18FD85732AB502030081FD5A /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		18FD85752AB502170081FD5A /* SplashVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVM.swift; sourceTree = "<group>"; };
+		18FD85772AB508380081FD5A /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
+		18FD857B2AB50F230081FD5A /* AppVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				180F688B2AB4D69A00CDF2A3 /* String+Ext.swift */,
+				18FD85772AB508380081FD5A /* Color+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -151,6 +160,8 @@
 			isa = PBXGroup;
 			children = (
 				180F68B32AB4E32800CDF2A3 /* Animation */,
+				18FD85732AB502030081FD5A /* SplashView.swift */,
+				18FD85752AB502170081FD5A /* SplashVM.swift */,
 			);
 			path = "View Layer";
 			sourceTree = "<group>";
@@ -220,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				18B952E52AB4D43900911771 /* awesome_q42App.swift */,
+				18FD857B2AB50F230081FD5A /* AppVM.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -336,10 +348,13 @@
 				180F68932AB4D77900CDF2A3 /* HIBPErrorResponse.swift in Sources */,
 				180F68B12AB4E29D00CDF2A3 /* Emitter.swift in Sources */,
 				180F68862AB4D5DB00CDF2A3 /* CustomError.swift in Sources */,
+				18FD857C2AB50F230081FD5A /* AppVM.swift in Sources */,
 				180F68BB2AB4E32800CDF2A3 /* AnimationUIView.swift in Sources */,
 				180F688C2AB4D69A00CDF2A3 /* String+Ext.swift in Sources */,
 				180F68BE2AB4E34B00CDF2A3 /* Images.swift in Sources */,
+				18FD85762AB502170081FD5A /* SplashVM.swift in Sources */,
 				180F68B02AB4E29D00CDF2A3 /* IEmitter.swift in Sources */,
+				18FD85782AB508380081FD5A /* Color+Ext.swift in Sources */,
 				180F68AC2AB4E29D00CDF2A3 /* ScreenEventsObserver.swift in Sources */,
 				180F68902AB4D6E800CDF2A3 /* WebsiteCheckResponse.swift in Sources */,
 				180F68BA2AB4E32800CDF2A3 /* AnimatedBackgroundVM.swift in Sources */,
@@ -349,6 +364,7 @@
 				180F688E2AB4D6C600CDF2A3 /* EmailDataLeak.swift in Sources */,
 				180F68BC2AB4E32800CDF2A3 /* AnimationUIViewRepresentable.swift in Sources */,
 				18B952E62AB4D43900911771 /* awesome_q42App.swift in Sources */,
+				18FD85742AB502030081FD5A /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

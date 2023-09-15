@@ -10,23 +10,13 @@ import Combine
 
 final class AnimatedBackgroundVM: ObservableObject {
     struct Model {
-        var isCandleLightAnimating: Bool = false
         var isFlowingParticles: Bool = false
         var isPausedAnimations: Bool = false
     }
     
-    static let mock: AnimatedBackgroundVM = .init(model: .init(isCandleLightAnimating: true, isFlowingParticles: true))
+    static let mock: AnimatedBackgroundVM = .init(model: .init(isFlowingParticles: true))
     
     @Published var model: Model
-    
-    var isCandleLightAnimating: Bool {
-        get {
-            model.isCandleLightAnimating
-        }
-        set {
-            model.isCandleLightAnimating = newValue
-        }
-    }
     
     var isFlowingParticles: Bool {
         get {
