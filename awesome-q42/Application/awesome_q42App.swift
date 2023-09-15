@@ -19,9 +19,6 @@ struct awesome_q42App: App {
             ZStack {
                 AnimatedBackgroundView(viewModel: animationViewModel)
             }
-            .onAppear {
-                animationViewModel.isCandleLightAnimating = true
-            }
         }
     }
     

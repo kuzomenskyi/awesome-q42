@@ -17,8 +17,6 @@
 		180F68A22AB4D87400CDF2A3 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F68A12AB4D87400CDF2A3 /* NetworkManagerTests.swift */; };
 		180F68AC2AB4E29D00CDF2A3 /* ScreenEventsObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F68A42AB4E29D00CDF2A3 /* ScreenEventsObserver.swift */; };
 		180F68AD2AB4E29D00CDF2A3 /* IScreenEventsObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F68A52AB4E29D00CDF2A3 /* IScreenEventsObserver.swift */; };
-		180F68AE2AB4E29D00CDF2A3 /* ICandleLightAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F68A72AB4E29D00CDF2A3 /* ICandleLightAnimator.swift */; };
-		180F68AF2AB4E29D00CDF2A3 /* CandleLightAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F68A82AB4E29D00CDF2A3 /* CandleLightAnimator.swift */; };
 		180F68B02AB4E29D00CDF2A3 /* IEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F68AA2AB4E29D00CDF2A3 /* IEmitter.swift */; };
 		180F68B12AB4E29D00CDF2A3 /* Emitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F68AB2AB4E29D00CDF2A3 /* Emitter.swift */; };
 		180F68B92AB4E32800CDF2A3 /* AnimatedBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F68B52AB4E32800CDF2A3 /* AnimatedBackgroundView.swift */; };
@@ -54,8 +52,6 @@
 		180F68A12AB4D87400CDF2A3 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
 		180F68A42AB4E29D00CDF2A3 /* ScreenEventsObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenEventsObserver.swift; sourceTree = "<group>"; };
 		180F68A52AB4E29D00CDF2A3 /* IScreenEventsObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IScreenEventsObserver.swift; sourceTree = "<group>"; };
-		180F68A72AB4E29D00CDF2A3 /* ICandleLightAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICandleLightAnimator.swift; sourceTree = "<group>"; };
-		180F68A82AB4E29D00CDF2A3 /* CandleLightAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CandleLightAnimator.swift; sourceTree = "<group>"; };
 		180F68AA2AB4E29D00CDF2A3 /* IEmitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IEmitter.swift; sourceTree = "<group>"; };
 		180F68AB2AB4E29D00CDF2A3 /* Emitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emitter.swift; sourceTree = "<group>"; };
 		180F68B52AB4E32800CDF2A3 /* AnimatedBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedBackgroundView.swift; sourceTree = "<group>"; };
@@ -90,7 +86,6 @@
 		180F687F2AB4D56800CDF2A3 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				180F68A62AB4E29D00CDF2A3 /* CandleLightAnimator */,
 				180F68A92AB4E29D00CDF2A3 /* Emitter */,
 				180F68A32AB4E29D00CDF2A3 /* ScreenEventsObserver */,
 				180F68802AB4D56E00CDF2A3 /* NetworkManager.swift */,
@@ -141,15 +136,6 @@
 				180F68A52AB4E29D00CDF2A3 /* IScreenEventsObserver.swift */,
 			);
 			path = ScreenEventsObserver;
-			sourceTree = "<group>";
-		};
-		180F68A62AB4E29D00CDF2A3 /* CandleLightAnimator */ = {
-			isa = PBXGroup;
-			children = (
-				180F68A72AB4E29D00CDF2A3 /* ICandleLightAnimator.swift */,
-				180F68A82AB4E29D00CDF2A3 /* CandleLightAnimator.swift */,
-			);
-			path = CandleLightAnimator;
 			sourceTree = "<group>";
 		};
 		180F68A92AB4E29D00CDF2A3 /* Emitter */ = {
@@ -349,7 +335,6 @@
 				180F68AD2AB4E29D00CDF2A3 /* IScreenEventsObserver.swift in Sources */,
 				180F68932AB4D77900CDF2A3 /* HIBPErrorResponse.swift in Sources */,
 				180F68B12AB4E29D00CDF2A3 /* Emitter.swift in Sources */,
-				180F68AE2AB4E29D00CDF2A3 /* ICandleLightAnimator.swift in Sources */,
 				180F68862AB4D5DB00CDF2A3 /* CustomError.swift in Sources */,
 				180F68BB2AB4E32800CDF2A3 /* AnimationUIView.swift in Sources */,
 				180F688C2AB4D69A00CDF2A3 /* String+Ext.swift in Sources */,
@@ -362,7 +347,6 @@
 				180F68B92AB4E32800CDF2A3 /* AnimatedBackgroundView.swift in Sources */,
 				180F68842AB4D5BC00CDF2A3 /* SpamDBInfo.swift in Sources */,
 				180F688E2AB4D6C600CDF2A3 /* EmailDataLeak.swift in Sources */,
-				180F68AF2AB4E29D00CDF2A3 /* CandleLightAnimator.swift in Sources */,
 				180F68BC2AB4E32800CDF2A3 /* AnimationUIViewRepresentable.swift in Sources */,
 				18B952E62AB4D43900911771 /* awesome_q42App.swift in Sources */,
 			);

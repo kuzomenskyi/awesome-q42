@@ -15,7 +15,6 @@ class AnimationUIView: UIView {
     
     // MARK: Variable
     lazy var emitter: IEmitter = Emitter(images: [Images.particle_1_5x5])
-    lazy var candleLightAnimator: ICandleLightAnimator = CandleLightAnimator(viewToAnimateOn: self)
     
     // MARK: Private Variable
     
@@ -46,13 +45,5 @@ class AnimationUIView: UIView {
     
     func stopParticlesFlowingAnimation() {
         emitter.layer.removeFromSuperlayer()
-    }
-    
-    func startCandleLightAnimation() {
-        candleLightAnimator.startAnimating()
-    }
-    
-    func stopCandleLightAnimation() {
-        candleLightAnimator.stopAnimating()
     }
 }

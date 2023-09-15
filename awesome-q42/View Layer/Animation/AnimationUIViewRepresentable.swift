@@ -32,11 +32,6 @@ struct AnimatioUIViewRepresetable: UIViewRepresentable {
     
     func updateUIView(_ uiView: UIViewType, context: Context) {
         let uiView = uiView as! AnimationUIView
-        if isCadleLightAnimating {
-            uiView.startCandleLightAnimation()
-        } else {
-            uiView.stopCandleLightAnimation()
-        }
         if isFlowingParticles {
             uiView.startParticlesFlowingAnimation()
         } else {
