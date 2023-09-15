@@ -25,21 +25,6 @@ final class NetworkManagerTests: XCTestCase {
     // MARK: Private Action
     
     // MARK: Function
-    func testGetSpamDBInfo() {
-        let expectation = XCTestExpectation(description: "testGetSpamDBInfo")
-        
-        Task {
-            do {
-                let _ = try await networkManager.getSpamDBInfo()
-                expectation.fulfill()
-            } catch {
-                XCTFail("Failed testGetSpamDBInfo with error: \(error)")
-            }
-        }
-        
-        wait(for: [expectation], timeout: 5)
-    }
-    
     func testSearchNumber() {
         let expectation = expectation(description: "testSearchNumber")
         Task {
@@ -49,10 +34,16 @@ final class NetworkManagerTests: XCTestCase {
                 expectation.fulfill()
             } catch {
                 do {
-                    let _ = try await networkManager.searchNumber("380669582930")
+                    // This number is not leaked
+                    let _ = try await networkManager.searchNumber("380669582930222")
                     expectation.fulfill()
                 } catch {
-                    XCTFail("Failed with error: \(error)")
+                    guard CustomError.numberNotFound.isEqualTo(error) else {
+                        XCTFail("Failed with error: \(error)")
+                        expectation.fulfill()
+                        return
+                    }
+                    
                     expectation.fulfill()
                 }
             }

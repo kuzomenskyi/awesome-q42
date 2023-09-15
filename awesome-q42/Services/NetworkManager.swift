@@ -30,31 +30,6 @@ final class NetworkManager: NSObject {
     // MARK: Private Action
     
     // MARK: Function
-    func getSpamDBInfo() async throws -> SpamDMInfo {
-        let request: URLRequest = .init(url: URL(string: checkerURLString)!)
-        
-        return try await withCheckedThrowingContinuation { continuation in
-            URLSession.shared.dataTask(with: request) { data, _, error in
-                guard error == nil else {
-                    continuation.resume(throwing: error!)
-                    return
-                }
-                
-                guard let data else {
-                    continuation.resume(throwing: CustomError("Failed to get response for the request. Data is nil"))
-                    return
-                }
-                
-                do {
-                    let info = try JSONDecoder().decode(SpamDMInfo.self, from: data)
-                    continuation.resume(returning: info)
-                } catch {
-                    continuation.resume(throwing: error)
-                }
-            }.resume()
-        }
-    }
-    
     func searchNumber(_ number: String) async throws -> Int {
         let number = number.numbersOnly()
         let request: URLRequest = .init(url: URL(string: "\(checkerURLString)/\(number)")!)
@@ -75,7 +50,7 @@ final class NetworkManager: NSObject {
                     let info = try JSONDecoder().decode(Int.self, from: data)
                     continuation.resume(returning: info)
                 } catch {
-                    continuation.resume(throwing: CustomError(Strings.SearchNumber.numberNotFoundErrorMessage))
+                    continuation.resume(throwing: CustomError.numberNotFound)
                 }
             }.resume()
         }
@@ -175,7 +150,7 @@ final class NetworkManager: NSObject {
     
     func checkWebsite(_ address: String) async throws -> WebsiteCheckResponse? {
         guard let domainName = getDomainName(from: address) else {
-            throw CustomError(Strings.WebsiteChecker.invalidWebsiteAddressMessage)
+            throw CustomError.invalidWebsiteAddress
         }
         return try await checkDomain(domainName)
     }
