@@ -23,7 +23,7 @@ struct HomeView: View {
 Thanks for your attention 😊 jefit.com is unsafe 🚨, google.com is safe ✅. What about q42.nl?
 """)
                 }
-                .frame(width: 230, height: 30)
+                .frame(width: size.width * 0.6, height: 30)
                 .clipShape(RoundedRectangle(cornerRadius: 0, style: .continuous))
                 .position(x: size.width / 2, y: size.height * 0.05)
                 
