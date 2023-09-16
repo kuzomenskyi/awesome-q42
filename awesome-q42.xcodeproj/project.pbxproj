@@ -30,6 +30,7 @@
 		187377BF2AB52B5200078882 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187377BE2AB52B5200078882 /* BlurView.swift */; };
 		187377C12AB52B6900078882 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187377C02AB52B6900078882 /* ActivityIndicator.swift */; };
 		187377C32AB5364800078882 /* ScrollingText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187377C22AB5364800078882 /* ScrollingText.swift */; };
+		187377C52AB5447300078882 /* WebsiteChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187377C42AB5447300078882 /* WebsiteChecker.swift */; };
 		18B952E62AB4D43900911771 /* awesome_q42App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B952E52AB4D43900911771 /* awesome_q42App.swift */; };
 		18B952EA2AB4D43A00911771 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18B952E92AB4D43A00911771 /* Assets.xcassets */; };
 		18B952ED2AB4D43A00911771 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18B952EC2AB4D43A00911771 /* Preview Assets.xcassets */; };
@@ -81,6 +82,7 @@
 		187377BE2AB52B5200078882 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		187377C02AB52B6900078882 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		187377C22AB5364800078882 /* ScrollingText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingText.swift; sourceTree = "<group>"; };
+		187377C42AB5447300078882 /* WebsiteChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsiteChecker.swift; sourceTree = "<group>"; };
 		18B952E22AB4D43900911771 /* awesome-q42.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "awesome-q42.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18B952E52AB4D43900911771 /* awesome_q42App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = awesome_q42App.swift; sourceTree = "<group>"; };
 		18B952E92AB4D43A00911771 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				180F68A92AB4E29D00CDF2A3 /* Emitter */,
 				180F68A32AB4E29D00CDF2A3 /* ScreenEventsObserver */,
 				180F68802AB4D56E00CDF2A3 /* NetworkManager.swift */,
+				187377C42AB5447300078882 /* WebsiteChecker.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 				18FD858A2AB51E170081FD5A /* TextFieldModifier.swift in Sources */,
 				18B952E62AB4D43900911771 /* awesome_q42App.swift in Sources */,
 				18FD85742AB502030081FD5A /* SplashView.swift in Sources */,
+				187377C52AB5447300078882 /* WebsiteChecker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

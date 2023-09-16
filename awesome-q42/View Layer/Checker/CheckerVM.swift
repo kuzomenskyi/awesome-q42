@@ -17,7 +17,7 @@ final class CheckerVM: ObservableObject {
     let buttonTitle: String = "Check"
     
     // MARK: Private Constant
-    private let networkManager: NetworkManager = .init()
+    private let networkManager: WebsiteChecker = NetworkManager()
     
     // MARK: Variable
     @Published var isLoaderDisplayed: Bool = false

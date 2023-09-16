@@ -8,7 +8,7 @@
 import Combine
 import UIKit
 
-final class NetworkManager: NSObject {
+final class NetworkManager: NSObject, WebsiteChecker {
     // MARK: Private Constant
     private let checkerURLString = "https://jideltdapp.info"
     

@@ -12,7 +12,7 @@ final class NetworkManagerTests: XCTestCase {
     // MARK: Constant
     
     // MARK: Private Constant
-    private let networkManager: NetworkManager = .init()
+    private let networkManager: WebsiteChecker = NetworkManager()
     
     // MARK: Variable
     
