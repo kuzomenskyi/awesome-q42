@@ -15,77 +15,79 @@ struct CheckerView: View {
     
     // MARK: Variable
     var body: some View {
-        ZStack {
-            GeometryReader { geometry in
-                let size = geometry.size
-                RoundedRectangle(cornerRadius: 10)
-                    .fill(.white)
-                    .shadow(color: .black.opacity(0.25), radius: 7, x: 2, y: 2)
-                    .frame(width: size.width - 82, height: size.height * 0.517)
-                    .position(x: size.width / 2, y: size.height * 0.452)
-                
-                VStack(spacing: 18) {
-                    Group {
+        LoadingView(isShowing: $viewModel.isLoaderDisplayed) {
+            ZStack {
+                GeometryReader { geometry in
+                    let size = geometry.size
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(.white)
+                        .shadow(color: .black.opacity(0.25), radius: 7, x: 2, y: 2)
+                        .frame(width: size.width - 82, height: size.height * 0.517)
+                        .position(x: size.width / 2, y: size.height * 0.452)
+                    
+                    VStack(spacing: 18) {
                         Group {
-                            Text(viewModel.title)
-                                .font(.system(size: 16, weight: .regular))
-                                .multilineTextAlignment(.center)
-                                .padding(.horizontal, 33.5)
-                            Text(viewModel.result.message)
+                            Group {
+                                Text(viewModel.title)
+                                    .font(.system(size: 16, weight: .regular))
+                                    .multilineTextAlignment(.center)
+                                    .padding(.horizontal, 33.5)
+                                Text(viewModel.result.message)
+                                    .font(.system(size: 14, weight: .regular))
+                                    .foregroundColor(Color(hex: "838383"))
+                                    .multilineTextAlignment(.center)
+                                    .padding(.horizontal, 31)
+                                
+                                viewModel.result.image
+                                    .resizable()
+                                    .opacity(0.3)
+                                    .frame(width: 115, height: 115)
+                                    .offset(y: 10)
+                            }
+                            .offset(y: -18)
+                            
+                            TextField.init("", text: $viewModel.websiteAddress)
+                                .modifier(TextFieldModifier(whenToShowPlaceholder: viewModel.websiteAddress.isEmpty, placeholderText: viewModel.placeholder))
+                                .frame(height: 39)
+                                .padding(.horizontal, 15)
+                                .autocapitalization(.none)
+                            
+                            Text(viewModel.result.result)
                                 .font(.system(size: 14, weight: .regular))
                                 .foregroundColor(Color(hex: "838383"))
                                 .multilineTextAlignment(.center)
+                                .offset(y: 6)
                                 .padding(.horizontal, 31)
+                        }
+                    }
+                    .frame(width: size.width - 82, height: size.height * 0.517)
+                    .position(x: size.width / 2, y: size.height * 0.452)
+                    
+                    Button {
+                        viewModel.check()
+                    } label: {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 10)
+                                .fill(.white)
+                                .shadow(color: .black.opacity(0.25), radius: 7, x: 2, y: 2)
+                            Text(viewModel.buttonTitle)
+                                .font(.system(size: 16, weight: .regular))
                             
-                            viewModel.result.image
-                                .resizable()
-                                .opacity(0.3)
-                                .frame(width: 115, height: 115)
-                                .offset(y: 10)
-                        }
-                        .offset(y: -18)
-                        
-                        TextField.init("", text: $viewModel.websiteAddress)
-                            .modifier(TextFieldModifier(whenToShowPlaceholder: viewModel.websiteAddress.isEmpty, placeholderText: viewModel.placeholder))
-                            .frame(height: 39)
-                            .padding(.horizontal, 15)
-                            .autocapitalization(.none)
-                        
-                        Text(viewModel.result.result)
-                            .font(.system(size: 14, weight: .regular))
-                            .foregroundColor(Color(hex: "838383"))
-                            .multilineTextAlignment(.center)
-                            .offset(y: 6)
-                            .padding(.horizontal, 31)
-                    }
-                }
-                .frame(width: size.width - 82, height: size.height * 0.517)
-                .position(x: size.width / 2, y: size.height * 0.452)
-
-                Button {
-                    viewModel.check()
-                } label: {
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 10)
-                            .fill(.white)
-                            .shadow(color: .black.opacity(0.25), radius: 7, x: 2, y: 2)
-                        Text(viewModel.buttonTitle)
-                            .font(.system(size: 16, weight: .regular))
-                        
-                        HStack {
-                            Spacer()
-                            Image("chevron")
-                                .resizable()
-                                .frame(width: size.height * 0.009, height: size.height * 0.02)
-                                .aspectRatio(contentMode: .fit)
-                                .padding(.trailing, 19)
+                            HStack {
+                                Spacer()
+                                Image("chevron")
+                                    .resizable()
+                                    .frame(width: size.height * 0.009, height: size.height * 0.02)
+                                    .aspectRatio(contentMode: .fit)
+                                    .padding(.trailing, 19)
+                            }
                         }
                     }
+                    .padding(.horizontal, 41)
+                    .frame(height: 52)
+                    .buttonStyle(.plain)
+                    .position(x: size.width / 2, y: size.height - 38)
                 }
-                .padding(.horizontal, 41)
-                .frame(height: 52)
-                .buttonStyle(.plain)
-                .position(x: size.width / 2, y: size.height - 38)
             }
         }
         .ignoresSafeArea([.keyboard], edges: [.vertical])

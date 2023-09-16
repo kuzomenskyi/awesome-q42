@@ -19,6 +19,7 @@ final class CheckerVM: ObservableObject {
     // MARK: Private Constant
     
     // MARK: Variable
+    @Published var isLoaderDisplayed: Bool = false
     @Published var websiteAddress: String = ""
     @Published private(set) var result: WebsiteCheckResult = .new
     
@@ -37,7 +38,11 @@ final class CheckerVM: ObservableObject {
     
     // MARK: Function
     func check() {
+        isLoaderDisplayed = true
         
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: .init(block: {
+            self.isLoaderDisplayed = false
+        }))
     }
     
     // MARK: Private Function
