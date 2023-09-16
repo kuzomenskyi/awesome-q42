@@ -51,6 +51,7 @@ struct CheckerView: View {
                                 .frame(height: 39)
                                 .padding(.horizontal, 15)
                                 .autocapitalization(.none)
+                                .autocorrectionDisabled()
                             
                             Text(viewModel.result.result)
                                 .font(.system(size: 14, weight: .regular))
@@ -89,6 +90,11 @@ struct CheckerView: View {
                     .position(x: size.width / 2, y: size.height - 38)
                 }
             }
+        }
+        .alert(isPresented: $viewModel.isErrorDisplayed) {
+            Alert(title: Text(""), message: Text(viewModel.error.description), dismissButton: .default(Text("OK")) {
+                viewModel.alertAction?()
+            })
         }
         .ignoresSafeArea([.keyboard], edges: [.vertical])
     }

@@ -18,13 +18,12 @@ struct awesome_q42App: App {
         WindowGroup {
             ZStack {
                 AnimatedBackgroundView(viewModel: animationViewModel)
-                // TODO: UNcomment
-//                switch viewModel.route {
-//                case .splash:
-//                    SplashView(viewModel: splashVM)
-//                case .home:
+                switch viewModel.route {
+                case .splash:
+                    SplashView(viewModel: splashVM)
+                case .home:
                     HomeView(viewModel: homeVM)
-//                }
+                }
             }
             .onAppear {
                 viewModel.configure(splashVM: splashVM, animatedBackgroundVM: animationViewModel)

@@ -15,11 +15,7 @@ struct HomeView: View {
     
     // MARK: Variable
     var body: some View {
-        GeometryReader { geometry in
-            let size = geometry.size
-            
-            CheckerView(viewModel: checkerVM)
-        }
+        CheckerView(viewModel: checkerVM)
     }
     
     // MARK: Private Variable
