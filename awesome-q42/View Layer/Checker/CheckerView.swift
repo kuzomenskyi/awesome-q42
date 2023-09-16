@@ -33,15 +33,19 @@ struct CheckerView: View {
                                     .multilineTextAlignment(.center)
                                     .padding(.horizontal, 33.5)
                                 Text(viewModel.result.message)
-                                    .font(.system(size: 14, weight: .regular))
+                                    .font(.system(size: 13, weight: .regular))
                                     .foregroundColor(Color(hex: "838383"))
                                     .multilineTextAlignment(.center)
-                                    .padding(.horizontal, 31)
+                                    .padding(.horizontal, 29)
+                                    .kerning(-0.2)
+                                    .lineLimit(2)
+                                    .minimumScaleFactor(0.5)
                                 
+                                let width = size.width * (isSmallIPhone ? 0.2 : 0.3)
                                 viewModel.result.image
                                     .resizable()
                                     .opacity(viewModel.result.alpha)
-                                    .frame(width: 115, height: 115)
+                                    .frame(width: width, height: width)
                                     .offset(y: 10)
                             }
                             .offset(y: -18)
@@ -54,9 +58,11 @@ struct CheckerView: View {
                                 .autocorrectionDisabled()
                             
                             Text(viewModel.result.result)
-                                .font(.system(size: 14, weight: .regular))
+                                .font(.system(size: 13, weight: .regular))
                                 .foregroundColor(Color(hex: "838383"))
                                 .multilineTextAlignment(.center)
+                                .lineLimit(2)
+                                .minimumScaleFactor(0.5)
                                 .offset(y: 6)
                                 .padding(.horizontal, 31)
                         }
@@ -101,6 +107,14 @@ struct CheckerView: View {
     
     // MARK: Private Variable
     @StateObject private var viewModel: CheckerVM
+    
+    private var screenHeight: CGFloat {
+        UIScreen.main.bounds.height
+    }
+
+    private var isSmallIPhone: Bool {
+        return screenHeight < 819
+    }
     
     // MARK: Init
     init(viewModel: CheckerVM) {
