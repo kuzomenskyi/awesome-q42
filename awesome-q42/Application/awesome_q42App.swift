@@ -28,6 +28,7 @@ struct awesome_q42App: App {
             .onAppear {
                 viewModel.configure(splashVM: splashVM, animatedBackgroundVM: animationViewModel)
             }
+            .ignoresSafeArea([.keyboard], edges: [.vertical])
         }
     }
     
