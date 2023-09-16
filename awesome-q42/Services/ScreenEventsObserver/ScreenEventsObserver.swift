@@ -11,11 +11,6 @@ import UIKit
 class ScreenEventsObserver {
     // MARK: Variable
     private var notificationCenter = NotificationCenter.default
-    
-    // MARK: - Deinit
-    deinit {
-        notificationCenter.removeObserver(self)
-    }
 }
 
 // MARK: - IScreenEventsObserver

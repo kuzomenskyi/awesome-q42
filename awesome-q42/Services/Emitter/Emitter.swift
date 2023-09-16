@@ -19,6 +19,7 @@ class Emitter: IEmitter {
         return layer
     }()
     
+    // MARK: Private Variable
     private lazy var emitterCells: [CAEmitterCell] = {
         let cells = getEmitterCells(forImages: images)
         return cells

@@ -9,20 +9,8 @@ import XCTest
 @testable import awesome_q42
 
 final class NetworkManagerTests: XCTestCase {
-    // MARK: Constant
-    
     // MARK: Private Constant
     private let networkManager: WebsiteChecker = NetworkManager()
-    
-    // MARK: Variable
-    
-    // MARK: Private Variable
-    
-    // MARK: Init
-    
-    // MARK: Action
-    
-    // MARK: Private Action
     
     // MARK: Function
     func testCheckingWebsite() {
@@ -51,6 +39,4 @@ final class NetworkManagerTests: XCTestCase {
         
         XCTAssertTrue(result == "google")
     }
-    
-    // MARK: Private Function
 }
