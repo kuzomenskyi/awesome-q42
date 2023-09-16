@@ -15,7 +15,22 @@ struct HomeView: View {
     
     // MARK: Variable
     var body: some View {
-        CheckerView(viewModel: checkerVM)
+        ZStack {
+            GeometryReader { geometry in
+                let size = geometry.size
+                VStack (alignment: .leading) {
+                    ScrollingText(text: """
+Thanks for your attention 😊 jefit.com is unsafe 🚨, google.com is safe ✅. What about q42.nl?
+""")
+                }
+                .frame(width: 230, height: 30)
+                .clipShape(RoundedRectangle(cornerRadius: 0, style: .continuous))
+                .position(x: size.width / 2, y: size.height * 0.05)
+                
+                CheckerView(viewModel: checkerVM)
+                    .position(x: size.width / 2, y: size.height / 2)
+            }
+        }
     }
     
     // MARK: Private Variable

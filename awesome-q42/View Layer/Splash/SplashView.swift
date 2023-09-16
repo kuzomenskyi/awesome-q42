@@ -32,7 +32,7 @@ struct SplashView: View {
                             overlayOpacity = 1
                         }
                         
-                        withAnimation(.easeIn(duration: 0.1).delay(3)) {
+                        withAnimation(.easeIn(duration: 0.5).delay(3)) {
                             scale = 0
                         }
                         
