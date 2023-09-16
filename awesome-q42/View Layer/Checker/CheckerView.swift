@@ -40,7 +40,7 @@ struct CheckerView: View {
                                 
                                 viewModel.result.image
                                     .resizable()
-                                    .opacity(0.3)
+                                    .opacity(viewModel.result.alpha)
                                     .frame(width: 115, height: 115)
                                     .offset(y: 10)
                             }

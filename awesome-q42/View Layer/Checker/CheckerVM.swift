@@ -56,6 +56,15 @@ final class CheckerVM: ObservableObject {
                     return string
                 }
                 
+                guard !input.contains("q42.nl") else {
+                    let _ = await MainActor.run {
+                        self.isLoaderDisplayed = false
+                        print("🔦 Wow")
+                        self.result = .wow
+                    }
+                    return
+                }
+                
                 if let result = try await self.networkManager.checkWebsite(input) {
                     let _ = await MainActor.run {
                         self.isLoaderDisplayed = false
