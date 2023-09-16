@@ -31,8 +31,6 @@ class CustomError: NSError {
         return errorDescription
     }
     
-    // MARK: Private Variable
-    
     // MARK: Init
     init(_ description: String, code: Int) {
         self.title = "Error"
@@ -55,14 +53,8 @@ class CustomError: NSError {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: Action
-    
-    // MARK: Private Action
-    
     // MARK: Function
     func isEqualTo(_ error: Error) -> Bool {
         return (error as NSError).code == code
     }
-    
-    // MARK: Private Function
 }

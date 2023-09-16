@@ -9,10 +9,13 @@ import UIKit
 import SwiftUI
 
 struct ActivityIndicator: UIViewRepresentable {
-
-    @Binding var isAnimating: Bool
+    // MARK: Constant
     let style: UIActivityIndicatorView.Style
-
+    
+    // MARK: Variable
+    @Binding var isAnimating: Bool
+    
+    // MARK: Function
     func makeUIView(context: UIViewRepresentableContext<ActivityIndicator>) -> UIActivityIndicatorView {
         return UIActivityIndicatorView(style: style)
     }

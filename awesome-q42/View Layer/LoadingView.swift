@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct LoadingView<Content: View>: View {
+    // MARK: Variable
     @Binding var isShowing: Bool
     var content: Content
 
@@ -25,7 +26,7 @@ struct LoadingView<Content: View>: View {
                 VStack {
                     Text("Loading...")
                         .foregroundColor(.white)
-                    ActivityIndicator(isAnimating: .constant(true), style: .large)
+                    ActivityIndicator(style: .large, isAnimating: .constant(true))
                 }
                 .frame(width: geometry.size.width / 2,
                        height: geometry.size.height / 5)
@@ -36,6 +37,7 @@ struct LoadingView<Content: View>: View {
         }
     }
     
+    // MARK: Init
     init(isShowing: Binding<Bool>, @ViewBuilder content: () -> Content) {
         self._isShowing = isShowing
         self.content = content()

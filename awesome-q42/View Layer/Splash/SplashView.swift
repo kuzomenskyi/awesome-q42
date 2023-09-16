@@ -9,10 +9,6 @@ import SwiftUI
 import Combine
 
 struct SplashView: View {
-    // MARK: Constant
-    
-    // MARK: Private Constant
-    
     // MARK: Variable
     var body: some View {
         GeometryReader { geometry in
@@ -74,14 +70,6 @@ struct SplashView: View {
     init(viewModel: SplashVM) {
         self._viewModel = StateObject(wrappedValue: viewModel)
     }
-    
-    // MARK: Action
-    
-    // MARK: Private Action
-    
-    // MARK: Function
-    
-    // MARK: Private Function
 }
 
 struct SplashView_Previews: PreviewProvider {

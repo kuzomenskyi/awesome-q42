@@ -9,20 +9,8 @@ import UIKit
 import SwiftUI
 
 class AnimationUIView: UIView {
-    // MARK: Constant
-    
-    // MARK: Private Constant
-    
     // MARK: Variable
     lazy var emitter: IEmitter = Emitter(images: [Images.heart])
-    
-    // MARK: Private Variable
-    
-    // MARK: Init
-    
-    // MARK: Action
-    
-    // MARK: Private Action
     
     // MARK: Function
     override func layoutSubviews() {

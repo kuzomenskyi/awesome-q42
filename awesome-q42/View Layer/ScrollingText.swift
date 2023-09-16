@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct ScrollingText: View {
-    @State var text = ""
-    @State private var isAnimating = false
+    // MARK: Private Constant
     private let animation = Animation.linear(duration: 10).repeatForever(autoreverses: false)
+    
+    // MARK: Variable
+    @State var text = ""
     
     var body : some View {
         let stringWidth = text.widthOfString(usingFont: UIFont.systemFont(ofSize: 15))
@@ -37,4 +39,7 @@ struct ScrollingText: View {
             }
         }
     }
+    
+    // MARK: Private Variable
+    @State private var isAnimating = false
 }

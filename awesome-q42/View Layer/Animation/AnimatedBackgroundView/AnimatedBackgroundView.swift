@@ -8,10 +8,6 @@
 import SwiftUI
 
 struct AnimatedBackgroundView: View {
-    // MARK: Constant
-    
-    // MARK: Private Constant
-    
     // MARK: Variable
     var body: some View {
         AnimatioUIViewRepresetable(isFlowingParticles: $viewModel.model.isFlowingParticles)
@@ -29,16 +25,6 @@ struct AnimatedBackgroundView: View {
     
     // MARK: Private Variable
     @Environment(\.scenePhase) private var scenePhase
-    
-    // MARK: Init
-    
-    // MARK: Action
-    
-    // MARK: Private Action
-    
-    // MARK: Function
-    
-    // MARK: Private Function
 }
 
 struct AnimatedBackgroundView_Previews: PreviewProvider {

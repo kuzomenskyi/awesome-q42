@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct TextFieldModifier: ViewModifier {
+    // MARK: Variable
     var whenToShowPlaceholder: Bool
     var placeholderText: String
     
+    // MARK: Function
     func body(content: Content) -> some View {
         GeometryReader { geometry in
             let size = geometry.size

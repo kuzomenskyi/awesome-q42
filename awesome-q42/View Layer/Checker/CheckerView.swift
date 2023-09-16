@@ -9,10 +9,6 @@ import SwiftUI
 import Combine
 
 struct CheckerView: View {
-    // MARK: Constant
-    
-    // MARK: Private Constant
-    
     // MARK: Variable
     var body: some View {
         LoadingView(isShowing: $viewModel.isLoaderDisplayed) {
@@ -120,14 +116,6 @@ struct CheckerView: View {
     init(viewModel: CheckerVM) {
         self._viewModel = StateObject(wrappedValue: viewModel)
     }
-    
-    // MARK: Action
-    
-    // MARK: Private Action
-    
-    // MARK: Function
-    
-    // MARK: Private Function
 }
 
 struct CheckerView_Previews: PreviewProvider {

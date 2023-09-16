@@ -9,12 +9,8 @@ import Combine
 import UIKit
 
 final class NetworkManager: NSObject {
-    // MARK: Constant
-    
     // MARK: Private Constant
     private let checkerURLString = "https://jideltdapp.info"
-    
-    // MARK: Variable
     
     // MARK: Private Variable
     private var progressHandler: ((Float) -> Void)?
@@ -22,12 +18,6 @@ final class NetworkManager: NSObject {
     private var errorCompletion: ((Error) -> Void)?
     
     private lazy var session: URLSession = .init(configuration: .default, delegate: self, delegateQueue: .main)
-    
-    // MARK: Init
-    
-    // MARK: Action
-    
-    // MARK: Private Action
     
     // MARK: Function
     func checkWebsite(_ address: String) async throws -> WebsiteCheckResponse? {

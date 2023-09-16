@@ -8,5 +8,6 @@
 import Foundation
 
 struct SpamDMInfo: Codable {
+    // MARK: Constant
     let main, delta: String
 }

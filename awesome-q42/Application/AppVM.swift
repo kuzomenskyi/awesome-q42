@@ -16,22 +16,14 @@ final class AppVM: ObservableObject {
     // MARK: Constant
     static let mock: AppVM = .init()
     
-    // MARK: Private Constant
-    
     // MARK: Variable
     @Published var route: Route = .splash
     var cancellables: Set<AnyCancellable> = .init()
-    
-    // MARK: Private Variable
     
     // MARK: Init
     init() {
         
     }
-    
-    // MARK: Action
-    
-    // MARK: Private Action
     
     // MARK: Function
     func configure(splashVM: SplashVM, animatedBackgroundVM: AnimatedBackgroundVM) {
@@ -45,7 +37,5 @@ final class AppVM: ObservableObject {
         }
         .store(in: &splashVM.cancellables)
     }
-    
-    // MARK: Private Function
 }
 

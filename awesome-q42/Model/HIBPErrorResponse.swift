@@ -8,6 +8,7 @@
 import Foundation
 
 struct HIBPErrorResponse: Codable {
+    // MARK: Constant
     let statusCode: Int
     let message: String
 }

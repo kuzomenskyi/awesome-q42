@@ -8,7 +8,6 @@
 import UIKit
 import CommonCrypto
 
-// TODO: Remove if not needed
 extension String {
     // MARK: Variable
     var localizedString: String {

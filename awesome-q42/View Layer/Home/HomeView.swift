@@ -9,10 +9,6 @@ import SwiftUI
 import Combine
 
 struct HomeView: View {
-    // MARK: Constant
-    
-    // MARK: Private Constant
-    
     // MARK: Variable
     var body: some View {
         ZStack {
@@ -41,14 +37,6 @@ Thanks for your attention 😊 jefit.com is unsafe 🚨, google.com is safe ✅.
     init(viewModel: HomeVM) {
         self._viewModel = StateObject(wrappedValue: viewModel)
     }
-    
-    // MARK: Action
-    
-    // MARK: Private Action
-    
-    // MARK: Function
-    
-    // MARK: Private Function
 }
 
 struct HomeView_Previews: PreviewProvider {

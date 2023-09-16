@@ -16,23 +16,11 @@ final class SplashVM: ObservableObject {
     let onDidClose: PassthroughSubject<Void, Never> = .init()
     let onWillClose: PassthroughSubject<Void, Never> = .init()
     
-    // MARK: Private Constant
-    
     // MARK: Variable
     var cancellables: Set<AnyCancellable> = .init()
-    
-    // MARK: Private Variable
     
     // MARK: Init
     init() {
         
     }
-    
-    // MARK: Action
-    
-    // MARK: Private Action
-    
-    // MARK: Function
-    
-    // MARK: Private Function
 }

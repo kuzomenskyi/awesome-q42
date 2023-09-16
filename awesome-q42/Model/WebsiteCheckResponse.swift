@@ -8,15 +8,6 @@
 import Foundation
 
 struct WebsiteCheckResponse: Codable {
-    let name, title, domain, breachDate: String?
-    let addedDate, modifiedDate: String?
-    let pwnCount: Int?
-    let description: String?
-    let logoPath: String?
-    let dataClasses: [String]?
-    let isVerified, isFabricated, isSensitive, isRetired: Bool?
-    let isSpamList, isMalware: Bool?
-
     enum CodingKeys: String, CodingKey {
         case name = "Name"
         case title = "Title"
@@ -35,4 +26,14 @@ struct WebsiteCheckResponse: Codable {
         case isSpamList = "IsSpamList"
         case isMalware = "IsMalware"
     }
+    
+    // MARK: Constant
+    let name, title, domain, breachDate: String?
+    let addedDate, modifiedDate: String?
+    let pwnCount: Int?
+    let description: String?
+    let logoPath: String?
+    let dataClasses: [String]?
+    let isVerified, isFabricated, isSensitive, isRetired: Bool?
+    let isSpamList, isMalware: Bool?
 }

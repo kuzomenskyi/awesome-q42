@@ -9,10 +9,6 @@
 import UIKit
 
 class Emitter: IEmitter {
-    // MARK: Constant
-    
-    // MARK: Private Constant
-    
     // MARK: Variable
     var images: [UIImage?]
     
@@ -22,8 +18,6 @@ class Emitter: IEmitter {
         layer.emitterCells = emitterCells
         return layer
     }()
-    
-    // MARK: Private Variable
     
     private lazy var emitterCells: [CAEmitterCell] = {
         let cells = getEmitterCells(forImages: images)
@@ -35,12 +29,6 @@ class Emitter: IEmitter {
         assert(!images.isEmpty, "Emiters image is nil")
         self.images = images
     }
-    
-    // MARK: Action
-    
-    // MARK: Private Action
-    
-    // MARK: Function
     
     // MARK: Private Function
     private func getEmitterCells(forImages images: [UIImage?]) -> [CAEmitterCell] {

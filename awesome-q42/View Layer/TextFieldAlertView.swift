@@ -9,9 +9,7 @@ import SwiftUI
 import Combine
 
 struct TextFieldAlertView<Presenting>: View where Presenting: View {
-    
-    @Binding var isShowing: Bool
-    @Binding var text: String
+    // MARK: Constant
     let presenting: Presenting
     let title: String
     let placeholder: String
@@ -19,6 +17,10 @@ struct TextFieldAlertView<Presenting>: View where Presenting: View {
     let onCancel: PassthroughSubject<String, Never>
     let onOK: PassthroughSubject<String, Never>
     
+    // MARK: Variable
+    @Binding var isShowing: Bool
+    @Binding var text: String
+
     var body: some View {
         GeometryReader { (deviceSize: GeometryProxy) in
             ZStack {
@@ -68,7 +70,7 @@ struct TextFieldAlertView<Presenting>: View where Presenting: View {
 
 struct TextFieldAlertView_Previews: PreviewProvider {
     static var previews: some View {
-        TextFieldAlertView(isShowing: .constant(true), text: .constant(""), presenting: Text(""), title: "Title", placeholder: "Placeholder", acceptsNumericOnly: false, onCancel: .init(), onOK: .init())
+        TextFieldAlertView(presenting: Text(""), title: "Title", placeholder: "Placeholder", acceptsNumericOnly: false, onCancel: .init(), onOK: .init(), isShowing: .constant(true), text: .constant(""))
     }
 }
 

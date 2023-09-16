@@ -14,8 +14,10 @@ final class AnimatedBackgroundVM: ObservableObject {
         var isPausedAnimations: Bool = false
     }
     
+    // MARK: Constant
     static let mock: AnimatedBackgroundVM = .init(model: .init(isFlowingParticles: true))
     
+    // MARK: Variable
     @Published var model: Model
     
     var isFlowingParticles: Bool {
@@ -36,6 +38,7 @@ final class AnimatedBackgroundVM: ObservableObject {
         }
     }
     
+    // MARK: Init
     init(model: Model) {
         self.model = model
     }

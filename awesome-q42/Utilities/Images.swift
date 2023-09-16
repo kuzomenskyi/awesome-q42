@@ -8,5 +8,6 @@
 import UIKit
 
 struct Images {
+    // MARK: Constant
     static let heart = UIImage(named: "heart")!
 }

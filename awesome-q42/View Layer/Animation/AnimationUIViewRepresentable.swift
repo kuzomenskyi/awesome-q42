@@ -9,20 +9,8 @@ import UIKit
 import SwiftUI
 
 struct AnimatioUIViewRepresetable: UIViewRepresentable {
-    // MARK: Constant
-    
-    // MARK: Private Constant
-    
     // MARK: Variable
     @Binding var isFlowingParticles: Bool
-    
-    // MARK: Private Variable
-    
-    // MARK: Init
-    
-    // MARK: Action
-    
-    // MARK: Private Action
     
     // MARK: Function
     func makeUIView(context: Context) -> some UIView {
@@ -37,6 +25,4 @@ struct AnimatioUIViewRepresetable: UIViewRepresentable {
             uiView.stopParticlesFlowingAnimation()
         }
     }
-    
-    // MARK: Private Function
 }

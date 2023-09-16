@@ -29,16 +29,10 @@ final class CheckerVM: ObservableObject {
     var cancellables: Set<AnyCancellable> = .init()
     private(set) var alertAction: (() -> Void)?
     
-    // MARK: Private Variable
-    
     // MARK: Init
     init() {
         
     }
-    
-    // MARK: Action
-    
-    // MARK: Private Action
     
     // MARK: Function
     func check() {

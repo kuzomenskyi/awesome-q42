@@ -9,6 +9,7 @@ import SwiftUI
 import Combine
 
 extension View {
+    // MARK: Function
     func placeholder<Content: View>(
         when shouldShow: Bool,
         alignment: Alignment = .leading,
@@ -27,14 +28,14 @@ extension View {
                         acceptsNumericOnly: Bool,
                         onCancel: PassthroughSubject<String, Never>,
                         onOK: PassthroughSubject<String, Never>) -> some View {
-        TextFieldAlertView(isShowing: isShowing,
-                           text: text,
-                           presenting: self,
+        TextFieldAlertView(presenting: self,
                            title: title,
                            placeholder: placeholder,
                            acceptsNumericOnly: acceptsNumericOnly,
                            onCancel: onCancel,
-                           onOK: onOK
+                           onOK: onOK,
+                           isShowing: isShowing,
+                           text: text
         )
     }
 }
